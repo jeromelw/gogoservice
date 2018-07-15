@@ -1,0 +1,5 @@
+package: github.com/jeromelw/gogoservice
+import:
+- package: github.com/davecgh/go-spew/spew
+- package: github.com/gorilla/mux
+- package: github.com/joho/godotenv

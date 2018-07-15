@@ -3,7 +3,7 @@ box: golang
 dev:
   steps:
     - setup-go-workspace:
-        package-dir: github.com/jerome/gogoservice
+        package-dir: github.com/jeromelw/gogoservice
 
     - script:
         name: env
@@ -24,7 +24,7 @@ dev:
 build:
   steps:
     - setup-go-workspace:
-        package-dir: github.com/jerome/gogoservice
+        package-dir: github.com/jeromelw/gogoservice
 
     - script:
         name: env
@@ -60,7 +60,7 @@ deploy:
        cmd: /pipeline/source/gogoservice
        port: "8080"
        tag: latest
-       repository: jerome/book-gogoservice
+       repository: jeromelw/book-gogoservice
        registry: https://registry.hub.docker.com
 
    - cng/cf-deploy:
@@ -70,4 +70,4 @@ deploy:
        org: $ORG
        space: $SPACE
        appname: wercker-step-gogoservice
-docker_image: jerome/book-gogoservice
+docker_image: jeromelw/book-gogoservice
